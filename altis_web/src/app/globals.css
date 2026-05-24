@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --midnight: #0B0D12;
+  --ivory: #F3EFE7;
+  --crimson: #A61E2D;
+  --bronze: #8C6A43;
+  --steel: #6B7280;
+  --background: #0B0D12;
+  --foreground: #F3EFE7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-midnight: #0B0D12;
+  --color-ivory: #F3EFE7;
+  --color-crimson: #A61E2D;
+  --color-bronze: #8C6A43;
+  --color-steel: #6B7280;
+  --color-crimson-hover: #C4283A;
+  --color-surface: #14161C;
+  --color-surface-light: #1A1D25;
+  --color-border: #2A2D36;
+  --color-border-light: #3A3D46;
+  --font-heading: var(--font-cairo);
+  --font-body: var(--font-cairo);
+  --font-arabic: var(--font-cairo);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+::selection {
+  background: #A61E2D;
+  color: #F3EFE7;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0D12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2D36;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3A3D46;
+}
+
+/* Global grain texture overlay — applied via .grain-overlay class */
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+}
+
+/* Section crimson divider */
+.section-divider {
+  position: relative;
+}
+.section-divider::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: var(--crimson);
+  opacity: 0.3;
+}

@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"53e12134991c1a1e","type":"text","text":" master roadmap","x":-180,"y":140,"width":250,"height":60},
+		{"id":"eab72ac952b7e2e2","type":"text","text":"Brand foundation","x":280,"y":140,"width":250,"height":60},
+		{"id":"05530e949240dfee","type":"file","file":"00-start-here/Comprehensive Roadmap - Altis (AR-FR).md","x":-760,"y":406,"width":889,"height":754,"color":"3"},
+		{"id":"b0be4bf5e907d6d1","type":"file","file":"02-business/Business Model - Professional Arabic Edition.md","x":1658,"y":356,"width":1142,"height":924,"color":"4"},
+		{"id":"58bd8fcfe3980f7a","x":520,"y":356,"width":1080,"height":924,"color":"4","type":"file","file":"02-business/Business Plan - Professional Arabic Edition.md"}
+	],
+	"edges":[
+		{"id":"055bb1dfd8286116","fromNode":"53e12134991c1a1e","fromSide":"right","toNode":"eab72ac952b7e2e2","toSide":"left"},
+		{"id":"a11989fde16813ed","fromNode":"53e12134991c1a1e","fromSide":"bottom","toNode":"05530e949240dfee","toSide":"top"}
+	]
+}
