@@ -1,6 +1,6 @@
 "use server";
 
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { redirect } from "next/navigation";
 
 export async function submitTrialBooking(formData: FormData) {
@@ -12,7 +12,7 @@ export async function submitTrialBooking(formData: FormData) {
   const preferredTime = (formData.get("preferredTime") as string) || null;
   const message = (formData.get("message") as string) || null;
 
-  const { error } = await supabase.from("trial_bookings").insert({
+  const { error } = await getSupabase().from("trial_bookings").insert({
     full_name: fullName,
     phone,
     email,
@@ -36,7 +36,7 @@ export async function submitContactInquiry(formData: FormData) {
   const email = (formData.get("email") as string) || null;
   const message = (formData.get("message") as string) || null;
 
-  const { error } = await supabase.from("contact_inquiries").insert({
+  const { error } = await getSupabase().from("contact_inquiries").insert({
     name,
     phone,
     email,
