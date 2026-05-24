@@ -22,7 +22,7 @@ const contactInfo = [
     icon: Phone,
     label: "الهاتف",
     value: "+213 XX XX XX XX",
-    href: "tel:+213XXXXXXXXX",
+    href: "tel:+213699872687",
   },
   {
     icon: Mail,
@@ -34,7 +34,7 @@ const contactInfo = [
     icon: MessageCircle,
     label: "واتساب",
     value: "راسلنا على واتساب",
-    href: "https://wa.me/213XXXXXXXXX",
+    href: "https://wa.me/213699872687",
   },
   {
     icon: Clock,
